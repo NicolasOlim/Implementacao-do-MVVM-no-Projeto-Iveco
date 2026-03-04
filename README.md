@@ -33,13 +33,11 @@ Para facilitar o entendimento da arquitetura, consulte os diagramas abaixo que r
 Representação de alto nível das entidades, atributos e suas cardinalidades.
 
 ![Modelo Conceitual](imagens/1.png)
-*(Certifique-se de que o arquivo `1.png` esteja no mesmo diretório deste README ou atualize o caminho da imagem)*
 
 ### Modelo Lógico/Relacional
 Estrutura de tabelas, chaves primárias (PK) e chaves estrangeiras (FK).
 
 ![Modelo Lógico](imagens/2.png)
-*(Certifique-se de que o arquivo `2.png` esteja no mesmo diretório deste README ou atualize o caminho da imagem)*
 
 ---
 
