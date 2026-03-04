@@ -176,6 +176,6 @@ O projeto foi construído em **C#** utilizando a arquitetura MVVM. Abaixo está 
 ├── AssemblyInfo.cs          # Metadados do assembly
 ├── global.json              # Configurações globais do SDK do .NET
 └── README.md                # Esta documentação
-
+ ```
 
  ![Estrutura de Projeto C# .NET Seguindo o Padrão MVVM no IDE](./imagens/imagem3.png)
