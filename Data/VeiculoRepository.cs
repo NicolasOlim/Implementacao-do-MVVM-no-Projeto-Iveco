@@ -27,6 +27,30 @@ namespace Iveco_Green_Ledger.Data
 
         }
 
+        public string InserirOuRetornarVin(string modelo)
+        {
+
+            using var conn = DataBase.GetConnection();
+            conn.Open();
+
+            var cmd = new SqliteCommand("SELECT vin FROM Veiculo WHERE modelo = @modelo ", conn);
+            cmd.Parameters.AddWithValue("@modelo", modelo);
+
+            var result = cmd.ExecuteScalar();
+            if (result != null)
+                return Convert.ToString(result);
+
+            cmd = new SqliteCommand(
+                "INSERT INTO Veiculo (modelo) values(@modelo); ", conn);
+            cmd.Parameters.AddWithValue("@modelo", modelo);
+
+            return Convert.ToString(cmd.ExecuteScalar());
+
+
+
+
+        }
+
         public List<Veiculo> Listar()
         {
             var veiculos = new List<Veiculo>();

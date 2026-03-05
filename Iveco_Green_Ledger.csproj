@@ -9,7 +9,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Compile Remove="commands\RelayCommand.cs" />
+      <Compile Remove="Commands\RelayCommand.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Data\.gitignore" />
     </ItemGroup>
 
     <ItemGroup>
@@ -17,7 +21,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Include="commands\RelayCommand.cs" />
+      <None Include="Commands\RelayCommand.cs" />
     </ItemGroup>
 
     <ItemGroup>
