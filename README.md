@@ -10,8 +10,8 @@ Bem-vindo à documentação do esquema de banco de dados desenvolvido para o ger
 - [Diagramas](#diagramas)
 - [Dicionário de Dados](#dicionario-de-dados)
 - [Relacionamentos](#relacionamentos)
-- [Script SQL (SQLite)](#script-sql-sqlite)
-- [Estrutura de Diretórios](#estrutura-de-diretorio)
+- [Script SQL (SQLite)](#script-sql)
+- [Estrutura de Diretórios](#estrutura-de-diretorios)
 ---
 
 ## 🎯 Visão Geral
