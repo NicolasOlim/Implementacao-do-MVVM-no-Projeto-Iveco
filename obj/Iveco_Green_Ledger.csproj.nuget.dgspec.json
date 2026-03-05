@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dev_noite\\RiderProjects\\Iveco_Green_Ledger\\Iveco_Green_Ledger.csproj": {}
+    "C:\\Users\\Nicolas\\source\\repos\\Iveco_Green_Ledger.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dev_noite\\RiderProjects\\Iveco_Green_Ledger\\Iveco_Green_Ledger.csproj": {
+    "C:\\Users\\Nicolas\\source\\repos\\Iveco_Green_Ledger.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dev_noite\\RiderProjects\\Iveco_Green_Ledger\\Iveco_Green_Ledger.csproj",
+        "projectUniqueName": "C:\\Users\\Nicolas\\source\\repos\\Iveco_Green_Ledger.csproj",
         "projectName": "Iveco_Green_Ledger",
-        "projectPath": "C:\\Users\\dev_noite\\RiderProjects\\Iveco_Green_Ledger\\Iveco_Green_Ledger.csproj",
-        "packagesPath": "C:\\Users\\dev_noite\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dev_noite\\RiderProjects\\Iveco_Green_Ledger\\obj\\",
+        "projectPath": "C:\\Users\\Nicolas\\source\\repos\\Iveco_Green_Ledger.csproj",
+        "packagesPath": "C:\\Users\\Nicolas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nicolas\\source\\repos\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\dev_noite\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nicolas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\dev_noite\\.dotnet\\library-packs": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,7 +44,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -78,7 +79,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\dev_noite\\.dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -9,10 +9,15 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Compile Remove="commands\RelayCommand.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
       <Folder Include="Commands\" />
-      <Folder Include="Data\" />
-      <Folder Include="Models\" />
-      <Folder Include="Viewmodels\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="commands\RelayCommand.cs" />
     </ItemGroup>
 
     <ItemGroup>
