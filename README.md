@@ -1,20 +1,21 @@
-# Implementacao-do-MVVM-no-Projeto-Iveco
-Repositório criado para a realização documentação da implementação do MVVM ao nosso  projeto da iveco
+# Implementacao do MVVM no Projeto Iveco
+Repositório criado para a realização documentação da implementação do MVVM ao nosso projeto da iveco
 
 # 🚛 Documentação do Banco de Dados: Cadeia de Suprimentos e Veículos
 
 Bem-vindo à documentação do esquema de banco de dados desenvolvido para o gerenciamento e rastreabilidade da cadeia de suprimentos de veículos. Este modelo permite o controle de fornecedores, lotes de matérias-primas (incluindo o monitoramento da pegada de carbono), registro de veículos e a associação exata de quais componentes e lotes compõem cada veículo.
 
 ## 📑 Índice
-- [Visão Geral](#visão-geral)
+- [Visão Geral](#visao-geral)
 - [Diagramas](#diagramas)
-- [Dicionário de Dados](#dicionário-de-dados)
+- [Dicionário de Dados](#dicionario-de-dados)
 - [Relacionamentos](#relacionamentos)
-- [Script SQL (SQLite)](#script-sql-sqlite)
-- [Notas de Implementação](#notas-de-implementação)
+- [Script SQL (SQLite)](#script-sql)
+- [Estrutura de Diretórios](#estrutura-de-diretorios)
 
 ---
 
+<a id="visao-geral"></a>
 ## 🎯 Visão Geral
 
 O sistema é composto por 4 entidades principais, estruturadas para suportar um banco de dados relacional (focado em SQLite):
@@ -25,6 +26,7 @@ O sistema é composto por 4 entidades principais, estruturadas para suportar um 
 
 ---
 
+<a id="diagramas"></a>
 ## 📊 Diagramas
 
 Para facilitar o entendimento da arquitetura, consulte os diagramas abaixo que representam as fases de modelagem.
@@ -41,6 +43,7 @@ Estrutura de tabelas, chaves primárias (PK) e chaves estrangeiras (FK).
 
 ---
 
+<a id="dicionario-de-dados"></a>
 ## 🗄️ Dicionário de Dados
 
 Abaixo está o detalhamento técnico de cada tabela e seus respectivos campos.
@@ -88,6 +91,7 @@ Tabela associativa que vincula os veículos aos lotes de matéria-prima, garanti
 
 ---
 
+<a id="relacionamentos"></a>
 ## 🔗 Relacionamentos
 
 * **`Fornecedor` 1 ↔ N `LoteMateriaPrima`**: Um fornecedor pode entregar múltiplos lotes de matéria-prima, mas um lote específico vem de apenas um fornecedor.
@@ -96,13 +100,12 @@ Tabela associativa que vincula os veículos aos lotes de matéria-prima, garanti
 
 ---
 
+<a id="script-sql"></a>
 ## 💻 Script SQL (SQLite)
 
 Para criar a estrutura em seu banco de dados SQLite, execute o script abaixo:
 
 ```sql
--- Dica de ouro para SQLite: Sempre rode este comando na sua conexão
--- para garantir que o banco respeite as regras de Chave Estrangeira (ON DELETE CASCADE, etc)
 PRAGMA foreign_keys = ON;
 
 -- 1. Tabela Fornecedor
@@ -145,14 +148,15 @@ CREATE TABLE VeiculoComponente (
 );
  ```
 
-## 📁 Estrutura de Diretórios (Iveco_Green_Ledger)
+<a id="estrutura-de-diretorios"></a>
+## 📁 Estrutura de Diretórios
 
 O projeto foi construído em **C#** utilizando a arquitetura MVVM. Abaixo está o mapeamento da nossa estrutura de pastas e a responsabilidade de cada diretório:
 
 ```text
 📁 Iveco_Green_Ledger/
 │
-├── 📁 Commands/             # Implementaremos o ICommand (ex: RelayCommand)
+├── 📁 Commands/             # Implementaremos o ICommand 
 │                            # Que será utilizado para vincular ações de botões da View para a ViewModel.
 │
 ├── 📁 Data/                 # Configuração do Banco de Dados e Repositórios
@@ -170,7 +174,7 @@ O projeto foi construído em **C#** utilizando a arquitetura MVVM. Abaixo está 
 │
 ├── 📁 Views/                # Telas da aplicação 
 │   └── MainWindow.xaml      # Janela principal da aplicação - interface
-│       └── MainWindow.xaml.cs # Code-behind (mantido o mais limpo possível)
+│       └── MainWindow.xaml.cs # Code-behind 
 │
 ├── App.xaml                 # Ponto de entrada da interface gráfica e recursos globais
 ├── AssemblyInfo.cs          # Metadados do assembly
