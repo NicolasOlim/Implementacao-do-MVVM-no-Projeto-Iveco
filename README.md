@@ -11,8 +11,7 @@ Bem-vindo à documentação do esquema de banco de dados desenvolvido para o ger
 - [Dicionário de Dados](#dicionário-de-dados)
 - [Relacionamentos](#relacionamentos)
 - [Script SQL (SQLite)](#script-sql-sqlite)
-- [Notas de Implementação](#notas-de-implementação)
-
+- [Estrutura de Diretórios](#estrutura-de-diretorio)
 ---
 
 ## 🎯 Visão Geral
@@ -144,7 +143,7 @@ CREATE TABLE VeiculoComponente (
 );
  ```
 
-## 📁 Estrutura de Diretórios (Iveco_Green_Ledger)
+## 📁 Estrutura de Diretórios
 
 O projeto foi construído em **C#** utilizando a arquitetura MVVM. Abaixo está o mapeamento da nossa estrutura de pastas e a responsabilidade de cada diretório:
 
