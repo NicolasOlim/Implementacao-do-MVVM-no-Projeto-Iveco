@@ -2,4 +2,6 @@ bin/
 obj/
 .idea/
 *.user
+[Oo]bj/
+[Bb]in/
 .vs/

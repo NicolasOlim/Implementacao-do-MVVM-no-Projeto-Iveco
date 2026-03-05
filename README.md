@@ -143,3 +143,39 @@ CREATE TABLE VeiculoComponente (
     CONSTRAINT FK_Componente_Lote FOREIGN KEY (LoteMateriaPrimaId) 
         REFERENCES LoteMateriaPrima(Id)
 );
+ ```
+
+## 📁 Estrutura de Diretórios (Iveco_Green_Ledger)
+
+O projeto foi construído em **C#** utilizando a arquitetura MVVM. Abaixo está o mapeamento da nossa estrutura de pastas e a responsabilidade de cada diretório:
+
+```text
+📁 Iveco_Green_Ledger/
+│
+├── 📁 Commands/             # Implementaremos o ICommand (ex: RelayCommand)
+│                            # Que será utilizado para vincular ações de botões da View para a ViewModel.
+│
+├── 📁 Data/                 # Configuração do Banco de Dados e Repositórios
+│                           
+│
+├── 📁 imagens/              # Imagens contidas nesse git
+│   ├── 1.png                # Imagem do Modelo Conceitual
+│   └── 2.png                # Imagem do Modelo Lógico
+│
+├── 📁 Models/               # Entidades de negócio e espelho das tabelas do banco
+│                            # Ex: Fornecedor.cs, LoteMateriaPrima.cs, Veiculo.cs
+│
+├── 📁 ViewModels/           # Lógica de apresentação e gerenciamento de estado
+│                            # Faz a ponte entre as Views e os Models/Data.
+│
+├── 📁 Views/                # Telas da aplicação 
+│   └── MainWindow.xaml      # Janela principal da aplicação - interface
+│       └── MainWindow.xaml.cs # Code-behind (mantido o mais limpo possível)
+│
+├── App.xaml                 # Ponto de entrada da interface gráfica e recursos globais
+├── AssemblyInfo.cs          # Metadados do assembly
+├── global.json              # Configurações globais do SDK do .NET
+└── README.md                # Esta documentação
+ ```
+
+
