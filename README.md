@@ -101,8 +101,7 @@ Tabela associativa que vincula os veículos aos lotes de matéria-prima, garanti
 Para criar a estrutura em seu banco de dados SQLite, execute o script abaixo:
 
 ```sql
--- Dica de ouro para SQLite: Sempre rode este comando na sua conexão
--- para garantir que o banco respeite as regras de Chave Estrangeira (ON DELETE CASCADE, etc)
+
 PRAGMA foreign_keys = ON;
 
 -- 1. Tabela Fornecedor
