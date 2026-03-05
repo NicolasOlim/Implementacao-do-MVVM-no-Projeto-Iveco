@@ -9,19 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Compile Remove="Commands\RelayCommand.cs" />
-    </ItemGroup>
-
-    <ItemGroup>
       <None Remove="Data\.gitignore" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Commands\" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <None Include="Commands\RelayCommand.cs" />
     </ItemGroup>
 
     <ItemGroup>
@@ -35,6 +23,10 @@
     <ItemGroup>
       <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="10.0.2" />
       <PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" Version="3.0.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Page Include="App.xaml" />
     </ItemGroup>
 
 </Project>
