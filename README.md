@@ -148,6 +148,7 @@ CREATE TABLE VeiculoComponente (
 );
  ```
 
+<a id="estrutura-de-diretorios"></a>
 ## 📁 Estrutura de Diretórios
 
 O projeto foi construído em **C#** utilizando a arquitetura MVVM. Abaixo está o mapeamento da nossa estrutura de pastas e a responsabilidade de cada diretório:
