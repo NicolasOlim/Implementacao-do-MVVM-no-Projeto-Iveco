@@ -151,7 +151,7 @@ O projeto foi construído em **C#** utilizando a arquitetura MVVM. Abaixo está 
 ```text
 📁 Iveco_Green_Ledger/
 │
-├── 📁 Commands/             # Implementaremos o ICommand (ex: RelayCommand)
+├── 📁 Commands/             # Implementaremos o ICommand 
 │                            # Que será utilizado para vincular ações de botões da View para a ViewModel.
 │
 ├── 📁 Data/                 # Configuração do Banco de Dados e Repositórios
@@ -169,7 +169,7 @@ O projeto foi construído em **C#** utilizando a arquitetura MVVM. Abaixo está 
 │
 ├── 📁 Views/                # Telas da aplicação 
 │   └── MainWindow.xaml      # Janela principal da aplicação - interface
-│       └── MainWindow.xaml.cs # Code-behind (mantido o mais limpo possível)
+│       └── MainWindow.xaml.cs # Code-behind 
 │
 ├── App.xaml                 # Ponto de entrada da interface gráfica e recursos globais
 ├── AssemblyInfo.cs          # Metadados do assembly
