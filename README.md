@@ -6,9 +6,9 @@ Repositório criado para a realização documentação da implementação do MVV
 Bem-vindo à documentação do esquema de banco de dados desenvolvido para o gerenciamento e rastreabilidade da cadeia de suprimentos de veículos. Este modelo permite o controle de fornecedores, lotes de matérias-primas (incluindo o monitoramento da pegada de carbono), registro de veículos e a associação exata de quais componentes e lotes compõem cada veículo.
 
 ## 📑 Índice
-- [Visão Geral](#visão-geral)
+- [Visão Geral](#visao-geral)
 - [Diagramas](#diagramas)
-- [Dicionário de Dados](#dicionário-de-dados)
+- [Dicionário de Dados](#dicionario-de-dados)
 - [Relacionamentos](#relacionamentos)
 - [Script SQL (SQLite)](#script-sql-sqlite)
 - [Estrutura de Diretórios](#estrutura-de-diretorio)
