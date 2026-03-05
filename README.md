@@ -1,5 +1,5 @@
 # Implementacao do MVVM no Projeto Iveco
-Repositório criado para a realização documentação da implementação do MVVM ao nosso  projeto da iveco
+Repositório criado para a realização documentação da implementação do MVVM ao nosso projeto da iveco
 
 # 🚛 Documentação do Banco de Dados: Cadeia de Suprimentos e Veículos
 
@@ -12,8 +12,10 @@ Bem-vindo à documentação do esquema de banco de dados desenvolvido para o ger
 - [Relacionamentos](#relacionamentos)
 - [Script SQL (SQLite)](#script-sql)
 - [Estrutura de Diretórios](#estrutura-de-diretorios)
+
 ---
 
+<a id="visao-geral"></a>
 ## 🎯 Visão Geral
 
 O sistema é composto por 4 entidades principais, estruturadas para suportar um banco de dados relacional (focado em SQLite):
@@ -24,6 +26,7 @@ O sistema é composto por 4 entidades principais, estruturadas para suportar um 
 
 ---
 
+<a id="diagramas"></a>
 ## 📊 Diagramas
 
 Para facilitar o entendimento da arquitetura, consulte os diagramas abaixo que representam as fases de modelagem.
@@ -40,6 +43,7 @@ Estrutura de tabelas, chaves primárias (PK) e chaves estrangeiras (FK).
 
 ---
 
+<a id="dicionario-de-dados"></a>
 ## 🗄️ Dicionário de Dados
 
 Abaixo está o detalhamento técnico de cada tabela e seus respectivos campos.
@@ -87,6 +91,7 @@ Tabela associativa que vincula os veículos aos lotes de matéria-prima, garanti
 
 ---
 
+<a id="relacionamentos"></a>
 ## 🔗 Relacionamentos
 
 * **`Fornecedor` 1 ↔ N `LoteMateriaPrima`**: Um fornecedor pode entregar múltiplos lotes de matéria-prima, mas um lote específico vem de apenas um fornecedor.
@@ -95,12 +100,12 @@ Tabela associativa que vincula os veículos aos lotes de matéria-prima, garanti
 
 ---
 
+<a id="script-sql"></a>
 ## 💻 Script SQL (SQLite)
 
 Para criar a estrutura em seu banco de dados SQLite, execute o script abaixo:
 
 ```sql
-
 PRAGMA foreign_keys = ON;
 
 -- 1. Tabela Fornecedor
