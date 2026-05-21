@@ -1,10 +1,11 @@
-﻿using Microsoft.Data.Sqlite;
+﻿using Iveco_Green_Ledger.Models;
+using Microsoft.Data.Sqlite;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Iveco_Green_Ledger.Models;
 
 namespace Iveco_Green_Ledger.Data
 {
@@ -51,6 +52,7 @@ namespace Iveco_Green_Ledger.Data
 
         }
 
+
         public List<Veiculo> Listar()
         {
             var veiculos = new List<Veiculo>();
@@ -72,6 +74,31 @@ namespace Iveco_Green_Ledger.Data
             }
 
             return veiculos;
+        }
+
+        public DataTable ObterHistoricoVeiculosDataTable()
+        {
+            var tabela = new DataTable();
+
+            using var conn = DataBase.GetConnection();
+            conn.Open();
+
+            
+            using var cmd = new SqliteCommand(@"
+               SELECT 
+        v.Vin AS VIN, 
+        IFNULL(SUM(l.PegadaCarbonoPorKg), 0) AS ConsumoEletrico,
+        0.00 AS ConsumoGas
+    FROM Veiculo v
+    LEFT JOIN VeiculoComponente vc ON v.Vin = vc.VeiculoVin
+    LEFT JOIN LoteMateriaPrima l ON vc.LoteMateriaPrimaId = l.Id
+    GROUP BY v.Vin", conn);
+
+            using var reader = cmd.ExecuteReader();
+
+            tabela.Load(reader);
+
+            return tabela;
         }
     }
 }

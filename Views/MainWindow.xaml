@@ -1,12 +1,62 @@
 ﻿<Window x:Class="Iveco_Green_Ledger.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Iveco_Green_Ledger"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Protótipo - Linha de Produção IVECO" Height="700" Width="1000" Background="#F4F4F4">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
+        <Border Background="White" BorderBrush="#DDD" BorderThickness="0,0,0,1">
+            <TextBlock Text="PROTÓTIPO" FontSize="32" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#333"/>
+        </Border>
+
+        <StackPanel Grid.Row="1" Margin="20">
+            <TextBlock Text="Visão da Linha de Produção" FontSize="18" FontWeight="SemiBold" Margin="0,0,0,15"/>
+            <UniformGrid Columns="4" Height="150">
+                <Border Background="White" Margin="5" CornerRadius="5" BorderBrush="#CCC" BorderThickness="1">
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="ESTAMPARIA" HorizontalAlignment="Center" FontWeight="Bold" Foreground="#666"/>
+                        <TextBlock Text="210.00 kW" FontSize="20" HorizontalAlignment="Center" Margin="0,10" Foreground="#333"/>
+                    </StackPanel>
+                </Border>
+                <Border Background="White" Margin="5" CornerRadius="5" BorderBrush="#CCC" BorderThickness="1">
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="SOLDA" HorizontalAlignment="Center" FontWeight="Bold" Foreground="#666"/>
+                        <TextBlock Text="306.59 kW" FontSize="20" HorizontalAlignment="Center" Margin="0,10" Foreground="#333"/>
+                    </StackPanel>
+                </Border>
+                <Border Background="White" Margin="5" CornerRadius="5" BorderBrush="#004a96" BorderThickness="2">
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="PINTURA" HorizontalAlignment="Center" FontWeight="Bold" Foreground="#004a96"/>
+                        <TextBlock Text="281.37 kW" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,5"/>
+                        <TextBlock Text="🚚" FontSize="24" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+                <Border Background="White" Margin="5" CornerRadius="5" BorderBrush="#CCC" BorderThickness="1">
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="MONTAGEM FINAL" HorizontalAlignment="Center" FontWeight="Bold" Foreground="#666"/>
+                        <TextBlock Text="0.00 kW" FontSize="20" HorizontalAlignment="Center" Margin="0,10" Foreground="#333"/>
+                    </StackPanel>
+                </Border>
+            </UniformGrid>
+        </StackPanel>
+
+        <Grid Grid.Row="2" Margin="20,0,20,20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Histórico de Veículos Concluídos (Passaporte Digital)" FontSize="16" FontWeight="SemiBold" Margin="0,0,0,10"/>
+            <DataGrid ItemsSource="{Binding HistoricoVeiculos}" AutoGenerateColumns="False" Background="White" AlternatingRowBackground="#FAFAFA" HeadersVisibility="Column">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="VIN / Chassi" Binding="{Binding VIN}" Width="*"/>
+                    <DataGridTextColumn Header="Consumo Elétrico (kWh)" Binding="{Binding ConsumoEletrico}" Width="*"/>
+                    <DataGridTextColumn Header="Consumo Gás (m³)" Binding="{Binding ConsumoGas}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
     </Grid>
 </Window>

@@ -5,3 +5,12 @@ obj/
 [Oo]bj/
 [Bb]in/
 .vs/
+# Ignorar a pasta com as chaves do banco
+chave_Banco/
+
+# Ignorar o arquivo de chave do Firebase (independente de onde estiver)
+firebase-adminsdk.json
+
+# (Opcional, mas recomendado) Ignorar configurações locais que possam ter senhas
+appsettings.json
+appsettings.*.json

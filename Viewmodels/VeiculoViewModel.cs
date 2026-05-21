@@ -1,12 +1,13 @@
-﻿using Iveco_Green_Ledger.Models;
+﻿using Iveco_Green_Ledger.Commands;
+using Iveco_Green_Ledger.Data;
+using Iveco_Green_Ledger.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Iveco_Green_Ledger.Data;
-using Iveco_Green_Ledger.Commands;
 using System.Windows.Input;
 
 
@@ -22,6 +23,7 @@ namespace Iveco_Green_Ledger.Viewmodels
             SalvarCommand = new RelayCommand(Salvar, PodeSalvar);
             Veiculos = new ObservableCollection<Veiculo>();
             CarregarVeiculos();
+            CarregarHistorico();
         }
 
         private void CarregarVeiculos()
@@ -66,6 +68,24 @@ namespace Iveco_Green_Ledger.Viewmodels
             }
         }
 
+        private DataView _historicoVeiculos;
+        public DataView HistoricoVeiculos
+        {
+            get => _historicoVeiculos;
+            set
+            {
+                _historicoVeiculos = value;
+                OnPropertyChanged(nameof(HistoricoVeiculos));
+            }
+        }
+
+        private void CarregarHistorico()
+        {
+            var repo = new VeiculoRepository();
+            var tabela = repo.ObterHistoricoVeiculosDataTable();
+            HistoricoVeiculos = tabela.DefaultView;
+        }
+
         public ICommand SalvarCommand { get; }
 
         private void Salvar()
@@ -82,6 +102,7 @@ namespace Iveco_Green_Ledger.Viewmodels
 
             new VeiculoRepository().Inserir(veiculo);
             CarregarVeiculos();
+            CarregarHistorico();
             Limpar();
 
         }
